@@ -1,0 +1,113 @@
+#headerhead{
+    font-family: 'DotGothic16', sans-serif;
+}
+.port-item img{
+    height: 400px;
+    width: 600px;
+    box-shadow:15px 10px cyan, 30px 20px magenta;
+}
+a {
+    text-decoration: none;
+    color:white
+}
+
+#pagetitle{
+    border-bottom: magenta 3px solid;
+}
+
+p{
+    color:white;
+}
+ 
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #371D65;
+    color:white;
+}
+
+.navlinks{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    justify-content: space-between;
+    
+
+}
+#headerhead{
+    height: 75px;
+    width: 150px;
+    margin-right: 825px;
+    border-bottom: magenta 3px solid;
+   
+}
+
+.footer{
+    background-color: #371D65;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.fa-brands{
+    color:white;
+    padding:40px  
+}
+
+.fa-brands:hover{
+    background-color:#7A687F ;
+}
+
+
+body{
+    background-color:#371D65 ;
+    background-color: linear-gradient(#371D65(255, 0, 0, 0.5),#371D65(255, 0, 0, 0.5));
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navword{
+    width:125px;
+    padding: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.navword:hover{
+    background-color:#7A687F ;
+}
+h1{
+    color:white;
+}
+h1{
+    color:white;
+}
+
+.portfolio-message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.items{
+    
+   
+    margin-left:100px;
+}
+.port-item{
+    display:flex;
+    flex-direction: row;
+    margin:50px;
+    align-items: center;
+
+}
+
+.description{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:500px;
+    margin-right:10px;
+}

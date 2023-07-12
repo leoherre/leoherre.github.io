@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8ea6a27f64.js" crossorigin="anonymous"></script>
+    <script src="contact.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init('w2jSteV5RR4ou4A5I');
+    })();
+    </script>
+
+<script type="text/javascript">
+    function sendMail(){
+    document.getElementById('contact-form-id').addEventListener('submit', function(event){
+        event.preventDefault();
+        emailjs.sendForm('service_b5qe2z1','template_14sjqpk', '#contact-form-id')
+            .then(function(){
+                console.log('SUCCESS');
+                let success = document.getElementById('sendButton');
+                let contactForm = document.getElementById('contact-form-id');
+                contactForm.reset();
+                success.innerHTML = "Successfully Sent";
+                success.style.backgroundColor = "green";
+                setInterval(() => window.location.reload(true), 3000)
+            }, function(error){
+                console.log('FAILED...', error);
+            });
+    });
+}
+</script>
+</head>
+<body>
+    <div class = "navbar">
+        <h1 id = "headerhead">HerreraVela </h1>
+        <div class = "navlinks">
+           
+            <a class = "navword" href = "./home.html">Home</a>
+            <a class = "navword" href = "about.html">Portfolio</a>
+            <a class = "navword" href = "contact.html">Contact </a>
+            
+        </div>
+    </div>
+
+    <div class = "contact-message">
+        <h1 id = "pagetitle">Contact</h1>
+        <p> Fill out the form below and we can disucess anything, related to programming, development, or LEGOs of course.</p>
+    </div>
+    <form role = "form" class = "contactform" id = "contact-from-id">
+        <h1 id = "contactmehead">Contact Me</h1>
+        <label for="name"></label>
+        <input placeholder="Name" type="text" id="name" name="name" required>
+        
+        <label for="email"></label>
+        <input placeholder="Email" type="email" id="email" name="email" required>
+        
+        <label for="message"></label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button id = "sendButton" type="submit" onClick = 'sendMail()' value="submit">Lets Connect</button>
+    </form>
+
+    <div class = "footer">
+        <a href = "https://github.com/leoherre"> <i class="fa-brands fa-github fa-2x"></i></a>
+        <a href = "https://www.linkedin.com/in/leonelherreravela/"><i class="fa-brands fa-linkedin-in fa-2x"></i></a>
+    </div>
+</body>
+</html>
